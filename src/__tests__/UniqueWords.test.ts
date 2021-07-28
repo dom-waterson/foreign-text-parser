@@ -1,4 +1,4 @@
-import { uniqueWords } from '../index';
+import { uniqueWords } from '../uniqueWords';
 
 const sampleText = `El señor y la señora Dursley, que vivían en el número 4 de Privet Drive, 
 estaban orgullosos de decir que eran muy normales, afortunadamente. 
