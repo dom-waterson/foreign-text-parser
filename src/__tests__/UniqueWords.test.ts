@@ -6,7 +6,7 @@ Eran las últimas personas que se esperaría encontrar relacionadas con algo ext
 porque no estaban para tales tonterías.`;
 
 test('Parse all unique words from supplied text', () => {
-  expect(uniqueWords(sampleText)).toStrictEqual([
+  expect(uniqueWords(sampleText)).resolves.toStrictEqual([
     'que',
     'el',
     'de',
@@ -49,5 +49,5 @@ test('Parse all unique words from supplied text', () => {
 });
 
 test('Parse top 5 unique words from supplied text', () => {
-  expect(uniqueWords(sampleText, 5)).toStrictEqual(['que', 'el', 'de', 'estaban', 'eran']);
+  expect(uniqueWords(sampleText, 5)).resolves.toStrictEqual(['que', 'el', 'de', 'estaban', 'eran']);
 });
