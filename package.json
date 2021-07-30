@@ -1,6 +1,6 @@
 {
   "name": "foreign-text-parser",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Simple text parser to find common words in selected text",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
