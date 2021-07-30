@@ -24,7 +24,7 @@ porque no estaban para tales tonterías.`;
 
 const optionalWordLimit = 5
 
-uniqueWords(textToParse, optionalWordLimit);
+await uniqueWords(textToParse, optionalWordLimit);
 
 returns ['que', 'el', 'de', 'estaban', 'eran']
 ```
