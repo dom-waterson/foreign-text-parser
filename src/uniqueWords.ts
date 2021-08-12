@@ -27,11 +27,11 @@ export const uniqueWords = (text: string, options?: OptionParamaters): Promise<s
 
     let sortedWords = Object.keys(words).sort((a, b) => words[b] - words[a]);
 
-    if (options?.ignoreWords) {
+    if (options && options.ignoreWords) {
       sortedWords = sortedWords.filter((word) => !options.ignoreWords?.includes(word));
     }
 
-    if (options?.wordLimit) {
+    if (options && options.wordLimit) {
       sortedWords = sortedWords.slice(0, options.wordLimit);
     }
 

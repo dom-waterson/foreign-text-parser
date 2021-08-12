@@ -49,5 +49,31 @@ test('Parse all unique words from supplied text', () => {
 });
 
 test('Parse top 5 unique words from supplied text', () => {
-  expect(uniqueWords(sampleText, 5)).resolves.toStrictEqual(['que', 'el', 'de', 'estaban', 'eran']);
+  expect(uniqueWords(sampleText, { wordLimit: 5 })).resolves.toStrictEqual([
+    'que',
+    'el',
+    'de',
+    'estaban',
+    'eran',
+  ]);
+});
+
+test('Parse top 10 unique words and remove known words from supplied text', () => {
+  expect(
+    uniqueWords(sampleText, {
+      wordLimit: 10,
+      ignoreWords: ['señor', 'señora'],
+    }),
+  ).resolves.toStrictEqual([
+    'que',
+    'el',
+    'de',
+    'estaban',
+    'eran',
+    '4',
+    'y',
+    'la',
+    'dursley',
+    'vivían',
+  ]);
 });
